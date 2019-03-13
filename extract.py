@@ -37,6 +37,7 @@ def extract_file():
                     psw = psw[:-1]
                     # x 完整路径释放 -aoa 直接覆盖现有文件，而没有任何提示 -o 输出文件夹 -p 密码
                     cmd_command = '7z x -aoa -o' + archive[0] + ' -p' + psw + ' ' + i
+                    print(psw)
                     result = os.system(cmd_command)
                     if result == 0:
                         # 如果解压成功，则删除压缩文件
